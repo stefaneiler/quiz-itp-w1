@@ -1,7 +1,3 @@
-"""Intro to Python - Week 1 - Quiz."""
-
-
-# Question 5
 def calculate_tax(income):
     """Implement the code required to make this function work.
 
@@ -29,4 +25,14 @@ def calculate_tax(income):
     calculate_tax(income)  # $210,000 * 0.35 = 73500 = $73,500
     """
     # Write your code here
-    pass
+    if income <= 50000:
+        return '$' +str(income * 0.15)
+    
+    elif income <= 75000:
+        return '$' +str(income * 0.25)
+    
+    elif income <= 100000:
+        return '$' +str(income * 0.30)
+    
+    elif income > 100000:
+        return '$' +str(income * 0.35)

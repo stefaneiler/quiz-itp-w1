@@ -22,4 +22,11 @@ def matrix_sum(a_matrix):
     matrix_sum(m2)  # 198
     """
     # Write your code here
-    pass
+    
+    count = 0 
+    for i in a_matrix:
+        if isinstance(i, a_matrix):  # checks if `i` is a list
+            count += matrix_sum(i)
+        else:
+            count += i
+    return count
